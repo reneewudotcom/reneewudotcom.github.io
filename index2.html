@@ -18,15 +18,15 @@ brython({debug:1});
 }
 </script>
 <div id="text"></div>
-<script type="text/python>
-from browser import document	   
+<script type="text/python3>
+from browser import document, window	   
 showdown = window.showdown.new
 conv = showdown.Converter()   
 txt ="""
 # Welcome
 
 Hello.  Welcome to my **website**.
-	"""
+"""
 text = document['text']
 text <= conv.makeHtml(txt)
 </script>
