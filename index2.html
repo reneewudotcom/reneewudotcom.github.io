@@ -11,23 +11,8 @@ Hello.  Welcome to my **website**.
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
 <script>
-function getText(){
-    // read text from URL location
-    var request = new XMLHttpRequest();
-    request.open('GET', 'http://reneewu.com/file1.txt', true);
-    request.send(null);
-    request.onreadystatechange = function () {
-        if (request.readyState === 4 && request.status === 200) {
-            var type = request.getResponseHeader('Content-Type');
-            if (type.indexOf("text") !== 1) {
-                return request.responseText;
-            }
-        }
-    }
-}
 var conv = new showdown.Converter();
-//var txt = document.getElementById('content').innerHTML;
-var txt = getText();
+var txt = document.getElementById('content').innerHTML;
 console.log(txt);
 document.getElementById('content').innerHTML = conv.makeHtml(txt);
 </script>
