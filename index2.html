@@ -20,7 +20,8 @@ brython({debug:1});
 <div id="text"></div>
 <script type="text/python>
 from browser import document	   
-conv = window.showdown.Converter()
+showdown = window.showdown.new
+conv = showdown.Converter()   
 txt ="""
 # Welcome
 
