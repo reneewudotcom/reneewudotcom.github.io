@@ -1,6 +1,6 @@
 "use strict";
 
-importScripts('showdown/showdown.js');
+importScripts('showdown.js');
 var converter = new showdown.Converter();
 
 self.onmessage = function(message) {
