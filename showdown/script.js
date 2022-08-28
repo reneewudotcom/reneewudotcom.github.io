@@ -1,6 +1,6 @@
 "use strict";
 
-var worker = new Worker("worker.js");
+var worker = new Worker("showdown/worker.js");
 worker.onmessage = function(message) {
 	document.body.innerHTML = message.data;
 }
