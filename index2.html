@@ -21,8 +21,13 @@ brython({debug:1});
 <script type="text/python>
 from browser import document	   
 conv = window.showdown.Converter()
-txt = document['content']
-document["text"] = conv.makeHtml(txt)
+txt ="""
+# Welcome
+
+Hello.  Welcome to my **website**.
+	"""
+text = document['text']
+text <= conv.makeHtml(txt)
 </script>
 	</body>
 </html>
